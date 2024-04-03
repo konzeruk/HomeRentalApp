@@ -3,9 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeRentalApp.Server", "HomeRentalApp.Server\HomeRentalApp.Server.csproj", "{8E270088-CD29-4B00-A3A5-07C6C0682DEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeRentalApp.Server", "HomeRentalApp.Server\HomeRentalApp.Server.csproj", "{8E270088-CD29-4B00-A3A5-07C6C0682DEE}"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "homerentalapp.client", "homerentalapp.client\homerentalapp.client.esproj", "{3B2375B3-C105-451D-834C-8E2E2E5C8F7F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D15F91FF-9AA2-431E-ACFB-917763FA518D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationService", "AuthorizationService\AuthorizationService.csproj", "{6C392D59-8FE9-422C-A247-13CFC4B9797C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelperLibrarys", "HelperLibrarys", "{586A968C-880F-4CBF-9BB0-7F2F5434D043}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationContextDB", "ApplicationContextDB\ApplicationContextDB.csproj", "{4D3AD495-C493-41B1-9332-CB2E83CE42FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{BC47C605-D760-4F98-8B96-CC8EB6D68593}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{FF94A31A-B4FA-4B4E-A526-83E08B7AA1FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntitiesRepositories", "EntitiesRepositories\EntitiesRepositories.csproj", "{BF2348AF-008A-4F52-9C77-51A19E084E42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,9 +37,35 @@ Global
 		{3B2375B3-C105-451D-834C-8E2E2E5C8F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B2375B3-C105-451D-834C-8E2E2E5C8F7F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3B2375B3-C105-451D-834C-8E2E2E5C8F7F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6C392D59-8FE9-422C-A247-13CFC4B9797C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C392D59-8FE9-422C-A247-13CFC4B9797C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C392D59-8FE9-422C-A247-13CFC4B9797C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C392D59-8FE9-422C-A247-13CFC4B9797C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D3AD495-C493-41B1-9332-CB2E83CE42FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D3AD495-C493-41B1-9332-CB2E83CE42FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D3AD495-C493-41B1-9332-CB2E83CE42FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D3AD495-C493-41B1-9332-CB2E83CE42FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC47C605-D760-4F98-8B96-CC8EB6D68593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC47C605-D760-4F98-8B96-CC8EB6D68593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC47C605-D760-4F98-8B96-CC8EB6D68593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC47C605-D760-4F98-8B96-CC8EB6D68593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF94A31A-B4FA-4B4E-A526-83E08B7AA1FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF94A31A-B4FA-4B4E-A526-83E08B7AA1FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF94A31A-B4FA-4B4E-A526-83E08B7AA1FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF94A31A-B4FA-4B4E-A526-83E08B7AA1FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF2348AF-008A-4F52-9C77-51A19E084E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF2348AF-008A-4F52-9C77-51A19E084E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF2348AF-008A-4F52-9C77-51A19E084E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF2348AF-008A-4F52-9C77-51A19E084E42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6C392D59-8FE9-422C-A247-13CFC4B9797C} = {D15F91FF-9AA2-431E-ACFB-917763FA518D}
+		{4D3AD495-C493-41B1-9332-CB2E83CE42FE} = {586A968C-880F-4CBF-9BB0-7F2F5434D043}
+		{BC47C605-D760-4F98-8B96-CC8EB6D68593} = {586A968C-880F-4CBF-9BB0-7F2F5434D043}
+		{BF2348AF-008A-4F52-9C77-51A19E084E42} = {586A968C-880F-4CBF-9BB0-7F2F5434D043}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E6405C78-DA0E-4471-9428-9C04957977D5}

@@ -1,51 +1,37 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from "reac"
-//import Alert from './alert'
+import RentalPropertyForm from './rental_property_form.jsx'
+//import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 class RentalProperty extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            alertMessage: ""
+            codeForms: []
         };
 
-        this.handleInputChange = this.handleInputChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.setAlertMessage = this.setAlertMessage.bind(this);
+        //TODO:добавить запрос и возврат данных из запроса
+
+        const models = [
+            { url: "src/authorization.jsx", name: "name", address: "address", price: 123 },
+            { url: "/post/2", name: "name", address: "address", price: 123 },
+            { url: "/post/3", name: "name", address: "address", price: 123 }
+        ];
+
+        this.createCodeForms(models);
     }
 
-    handleInputChange(event) {
-        event.preventDefault();
-
-        const target = event.target;
-
-        this.setState({
-            [target.name]: target.value
+    createCodeForms(models) {
+        models.forEach((model) => {
+            this.state.codeForms.push(RentalPropertyForm.getNewForm(model),)
         });
-    }
-
-    handleSubmit(event) {
-        event.preventDefault();
-
-    }
-
-    setAlertMessage(message) {
-        this.setState({ alertMessage: message });
     }
 
     render() {
         return (
-            <div>
-                <rout href="https://www.google.ru/" style={{ color: "grey" }}>
-                    <form style={{ backgroundColor: "white" }}>
-                    
-                    <label>ffff</label>
-                    </form>
-                </rout>
-                <form><label>ffff</label></form>
-                <form><label>ffff</label></form>
-            </div>
+            <di>
+                {this.state.codeForms}
+            </di>
         );
     }
 }
