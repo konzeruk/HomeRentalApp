@@ -1,6 +1,6 @@
 using ApplicationContextDB.Contexts;
-using AuthorizationService.Controllers;
 using EntitiesRepositories;
+using HomeStorageService.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,9 +8,9 @@ var services = builder.Services;
 
 services.AddControllers();
 
-services.AddSingleton<ILogger>(s => s.GetService<ILogger<AuthController>>()!);
-services.AddScoped<ContextAuthDB>();
-services.AddScoped<AuthEntityRepository>();
+services.AddSingleton<ILogger>(s => s.GetService<ILogger<HomeStorageController>>()!);
+services.AddScoped<ContextHomeDB>();
+services.AddScoped<HomeEntityRepository>();
 
 
 var app = builder.Build();

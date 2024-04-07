@@ -9,17 +9,19 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "homerentalapp.client", "hom
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D15F91FF-9AA2-431E-ACFB-917763FA518D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationService", "AuthorizationService\AuthorizationService.csproj", "{6C392D59-8FE9-422C-A247-13CFC4B9797C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthorizationService", "AuthorizationService\AuthorizationService.csproj", "{6C392D59-8FE9-422C-A247-13CFC4B9797C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelperLibrarys", "HelperLibrarys", "{586A968C-880F-4CBF-9BB0-7F2F5434D043}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationContextDB", "ApplicationContextDB\ApplicationContextDB.csproj", "{4D3AD495-C493-41B1-9332-CB2E83CE42FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationContextDB", "ApplicationContextDB\ApplicationContextDB.csproj", "{4D3AD495-C493-41B1-9332-CB2E83CE42FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{BC47C605-D760-4F98-8B96-CC8EB6D68593}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTO", "DTO\DTO.csproj", "{BC47C605-D760-4F98-8B96-CC8EB6D68593}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{FF94A31A-B4FA-4B4E-A526-83E08B7AA1FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApp", "TestApp\TestApp.csproj", "{FF94A31A-B4FA-4B4E-A526-83E08B7AA1FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntitiesRepositories", "EntitiesRepositories\EntitiesRepositories.csproj", "{BF2348AF-008A-4F52-9C77-51A19E084E42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntitiesRepositories", "EntitiesRepositories\EntitiesRepositories.csproj", "{BF2348AF-008A-4F52-9C77-51A19E084E42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeStorageService", "HomeStorageService\HomeStorageService.csproj", "{99C34380-6EE6-4AE2-B449-0AEE80FAF166}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{BF2348AF-008A-4F52-9C77-51A19E084E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF2348AF-008A-4F52-9C77-51A19E084E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF2348AF-008A-4F52-9C77-51A19E084E42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99C34380-6EE6-4AE2-B449-0AEE80FAF166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99C34380-6EE6-4AE2-B449-0AEE80FAF166}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99C34380-6EE6-4AE2-B449-0AEE80FAF166}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99C34380-6EE6-4AE2-B449-0AEE80FAF166}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +72,7 @@ Global
 		{4D3AD495-C493-41B1-9332-CB2E83CE42FE} = {586A968C-880F-4CBF-9BB0-7F2F5434D043}
 		{BC47C605-D760-4F98-8B96-CC8EB6D68593} = {586A968C-880F-4CBF-9BB0-7F2F5434D043}
 		{BF2348AF-008A-4F52-9C77-51A19E084E42} = {586A968C-880F-4CBF-9BB0-7F2F5434D043}
+		{99C34380-6EE6-4AE2-B449-0AEE80FAF166} = {D15F91FF-9AA2-431E-ACFB-917763FA518D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E6405C78-DA0E-4471-9428-9C04957977D5}

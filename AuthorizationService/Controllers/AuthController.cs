@@ -1,4 +1,5 @@
-﻿using DTO.Models;
+﻿using DTO.Extensions;
+using DTO.Models;
 using EntitiesRepositories;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,10 +12,10 @@ namespace AuthorizationService.Controllers
         private ILogger logger;
         private AuthEntityRepository repository;
 
-        public AuthController(ILogger logger, IConfiguration servicesConfiguration)
+        public AuthController(ILogger logger, AuthEntityRepository repository)
         {
             this.logger = logger;
-            repository = new(servicesConfiguration.GetConnectionString(Constants.dbName)!);
+            this.repository = repository;
         }
 
         [HttpGet("getUser")]
@@ -26,7 +27,9 @@ namespace AuthorizationService.Controllers
                 
                 var userEntity = await repository.GetUserAsync(userModel.Login, userModel.Password);
 
-                return Ok(value: userEntity);
+                var response = (userEntity != null) ? userEntity.ToUserModelResponse() : null;
+
+                return Ok(value: response);
             }
             catch (Exception ex)
             {

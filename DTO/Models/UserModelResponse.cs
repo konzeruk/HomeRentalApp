@@ -2,12 +2,12 @@
 
 namespace DTO.Models
 {
-    public class UserModel
+    public sealed class UserModelResponse
     {
+        [JsonProperty("id")]
+        public int Id { get; set; }
+
         [JsonProperty("login")]
         public string Login { get; set; }
-
-        [JsonProperty("password")]
-        public string Password { get; set; }
     }
 }

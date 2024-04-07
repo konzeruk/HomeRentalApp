@@ -1,17 +1,18 @@
 ﻿using DTO.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
-namespace ApplicationContextDB
+namespace ApplicationContextDB.Contexts
 {
     public class ContextAuthDB : DbContext
     {
         private string urlServer;
 
-        public DbSet<AuthEntity> Auth { get; set; } = null!;
+        public DbSet<UserEntity> Auth { get; set; } = null!;
 
-        public ContextAuthDB(string urlServer, bool create = false)
+        public ContextAuthDB(IConfiguration сonfiguration, bool create = false)
         {
-            this.urlServer = urlServer;
+            urlServer = сonfiguration.GetConnectionString(Constants.dbAuth)!;
 
             if (create)
                 Database.EnsureCreated();
